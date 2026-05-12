@@ -3,821 +3,753 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Puneeth & Manojna — Event Coverage Quote by V4 Clicks</title>
+<title>Arjun & Priya — Quotation by v4 clicks Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root {
-  --ink: #0F0D0A;
-  --ink2: #2C2720;
-  --mid: #6B5F55;
-  --muted: #A09189;
-  --bg: #F8F4EF;
-  --bg2: #FFFFFF;
-  --gold: #C4923A;
-  --gold2: #E2B570;
-  --gold-pale: #FBF3E6;
-  --border: rgba(15,13,10,0.09);
-  --border-gold: rgba(196,146,58,0.3);
-}
+  :root {
+    --cream: #F9F5EF;
+    --warm-white: #FDFAF6;
+    --gold: #B8935A;
+    --gold-light: #D4AF84;
+    --dark: #1C1814;
+    --mid: #4A3F35;
+    --muted: #9A8E84;
+    --border: rgba(184,147,90,0.25);
+    --border-soft: rgba(28,24,20,0.1);
+  }
 
-html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; }
 
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  font-weight: 300;
-  line-height: 1.75;
-  font-size: 15px;
-}
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    font-weight: 300;
+    line-height: 1.7;
+  }
 
-/* ── HEADER ── */
-header {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 1rem 3rem;
-  background: rgba(248,244,239,0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-.logo {
-  display: flex; align-items: center; gap: 0.6rem;
-}
-.logo-mark {
-  width: 38px; height: 38px;
-  background: var(--ink);
-  display: flex; align-items: center; justify-content: center;
-}
-.logo-mark span {
-  color: var(--gold2);
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600; font-size: 1rem; letter-spacing: 0.02em;
-}
-.logo-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem; font-weight: 600; letter-spacing: 0.06em;
-  color: var(--ink);
-  text-decoration: none;
-}
-.logo-sub {
-  font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--muted); display: block; margin-top: -2px;
-}
-nav { display: flex; gap: 2rem; }
-nav a {
-  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--mid); text-decoration: none; transition: color 0.2s;
-}
-nav a:hover { color: var(--gold); }
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 3rem;
+    background: rgba(249,245,239,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border-soft);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; letter-spacing: 0.04em;
+    color: var(--dark);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--mid); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
 
-/* ── HERO ── */
-.hero {
-  min-height: 100vh;
-  display: grid; place-items: center;
-  text-align: center;
-  padding: 9rem 2rem 5rem;
-  position: relative;
-  overflow: hidden;
-}
-.hero-pattern {
-  position: absolute; inset: 0; opacity: 0.04;
-  background-image:
-    repeating-linear-gradient(0deg, var(--ink) 0, var(--ink) 1px, transparent 1px, transparent 60px),
-    repeating-linear-gradient(90deg, var(--ink) 0, var(--ink) 1px, transparent 1px, transparent 60px);
-}
-.hero-glow {
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 70% 50% at 50% 80%, rgba(196,146,58,0.14) 0%, transparent 70%);
-}
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 0.8rem;
-  font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 2rem;
-  position: relative;
-}
-.hero-eyebrow::before, .hero-eyebrow::after {
-  content: ''; display: block; width: 32px; height: 1px; background: var(--gold2);
-}
-.hero-names {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  font-weight: 300; line-height: 1;
-  margin-bottom: 0.5rem; position: relative;
-}
-.hero-names .amp {
-  font-style: italic; color: var(--gold); font-weight: 300;
-}
-.hero-tagline {
-  font-family: 'Cormorant Garamond', serif; font-style: italic;
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  color: var(--mid); margin-bottom: 2.5rem;
-}
-.hero-meta {
-  display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap;
-  margin-bottom: 3.5rem; position: relative;
-}
-.meta-chip {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 0.25rem;
-}
-.meta-chip .label {
-  font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
-}
-.meta-chip .val {
-  font-size: 0.88rem; color: var(--ink2); font-weight: 400;
-}
-.hero-divider {
-  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 1px; height: 60px;
-  background: linear-gradient(to bottom, var(--gold2), transparent);
-}
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 120%, rgba(184,147,90,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 10% 10%, rgba(184,147,90,0.06) 0%, transparent 60%);
+  }
+  .hero-tag {
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .hero-tag::before, .hero-tag::after {
+    content: ''; display: block; width: 40px; height: 0.5px; background: var(--gold-light);
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 400; line-height: 1.1;
+    margin-bottom: 1rem; position: relative;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub {
+    font-size: 0.9rem; letter-spacing: 0.06em; color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+  .hero-date {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 1.1rem; color: var(--mid); margin-bottom: 3rem;
+  }
+  .hero-scroll {
+    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
+    text-decoration: none; transition: color 0.2s; position: relative;
+  }
+  .hero-scroll:hover { color: var(--gold); }
+  .scroll-line {
+    width: 0.5px; height: 50px; background: linear-gradient(to bottom, var(--gold-light), transparent);
+    animation: scrollAnim 2s ease-in-out infinite;
+  }
+  @keyframes scrollAnim {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.1); }
+  }
 
-/* ── SECTIONS ── */
-.section {
-  max-width: 1080px; margin: 0 auto;
-  padding: 5rem 2rem;
-}
-.section-full { padding: 5rem 0; }
-.section-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+  /* SECTION STYLES */
+  section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .section-tag {
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400; margin-bottom: 1rem; line-height: 1.2;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .divider {
+    width: 60px; height: 1px; background: linear-gradient(to right, var(--gold), transparent);
+    margin: 1.5rem 0;
+  }
 
-.eyebrow {
-  font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 0.75rem;
-}
-.section-h {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.15;
-  margin-bottom: 1rem;
-}
-.section-h em { font-style: italic; color: var(--gold); }
-.rule {
-  width: 48px; height: 1px;
-  background: linear-gradient(to right, var(--gold), transparent);
-  margin: 1.25rem 0 2.5rem;
-}
+  /* INTRO STRIP */
+  .intro-strip {
+    background: var(--dark); color: var(--cream);
+    padding: 4rem 2rem; text-align: center;
+  }
+  .intro-strip p {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    max-width: 700px; margin: 0 auto;
+    line-height: 1.6; color: var(--gold-light);
+  }
 
-/* ── CLIENT CARD ── */
-.client-card {
-  background: var(--ink); color: var(--bg);
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 0;
-}
-.client-side {
-  padding: 3.5rem;
-  border-right: 1px solid rgba(255,255,255,0.07);
-}
-.client-side:last-child { border-right: none; }
-.client-side .eyebrow { color: var(--gold2); }
-.client-side h3 {
-  font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400;
-  margin-bottom: 1.5rem; color: #fff;
-}
-.info-row {
-  display: flex; gap: 0.75rem;
-  padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
-  font-size: 0.83rem;
-}
-.info-row .lbl { color: rgba(255,255,255,0.4); min-width: 70px; }
-.info-row .val { color: rgba(255,255,255,0.85); }
-.info-row .val a { color: var(--gold2); text-decoration: none; }
+  /* WHAT'S INCLUDED */
+  .included-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5px; background: var(--border-soft);
+    border: 0.5px solid var(--border-soft); margin-top: 3rem;
+  }
+  .included-item {
+    background: var(--warm-white);
+    padding: 2.5rem 2rem; text-align: center;
+    transition: background 0.3s;
+  }
+  .included-item:hover { background: #FFF8EF; }
+  .included-icon {
+    font-size: 1.8rem; margin-bottom: 1rem; color: var(--gold);
+  }
+  .included-item h3 { font-size: 0.85rem; letter-spacing: 0.08em; margin-bottom: 0.5rem; font-weight: 500; }
+  .included-item p { font-size: 0.82rem; color: var(--muted); }
 
-/* ── EVENTS TABLE ── */
-.events-wrap { overflow-x: auto; margin-top: 2rem; }
-.events-table {
-  width: 100%; border-collapse: collapse; min-width: 700px;
-}
-.events-table thead tr {
-  background: var(--ink);
-}
-.events-table th {
-  padding: 0.85rem 1.25rem;
-  font-size: 0.67rem; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--gold2); font-weight: 400; text-align: left;
-}
-.events-table td {
-  padding: 1rem 1.25rem; font-size: 0.85rem;
-  border-bottom: 1px solid var(--border);
-  vertical-align: top;
-}
-.events-table tr:hover td { background: var(--gold-pale); }
-.events-table .event-name { font-weight: 500; }
-.events-table .venue { color: var(--mid); font-size: 0.8rem; margin-top: 0.2rem; }
-.team-tag {
-  display: inline-block;
-  background: var(--gold-pale); color: var(--gold);
-  border: 1px solid var(--border-gold);
-  font-size: 0.7rem; padding: 0.2rem 0.6rem;
-  margin: 0.15rem 0.1rem 0.15rem 0;
-  border-radius: 2px;
-}
-.date-cell { color: var(--ink2); font-weight: 400; white-space: nowrap; }
+  /* PACKAGES */
+  .packages-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .package-card {
+    background: var(--warm-white);
+    border: 0.5px solid var(--border-soft);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .package-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(28,24,20,0.08); }
+  .package-card.featured {
+    background: var(--dark); color: var(--cream);
+    border-color: var(--gold);
+  }
+  .featured-badge {
+    position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--dark); font-size: 0.65rem; letter-spacing: 0.15em;
+    text-transform: uppercase; padding: 0.35rem 1.25rem;
+    font-weight: 500;
+  }
+  .package-name {
+    font-family: 'Playfair Display', serif; font-size: 1.5rem;
+    font-weight: 400; margin-bottom: 0.5rem;
+  }
+  .package-card.featured .package-name { color: var(--gold-light); }
+  .package-tagline { font-size: 0.8rem; color: var(--muted); margin-bottom: 2rem; }
+  .package-card.featured .package-tagline { color: rgba(249,245,239,0.5); }
+  .package-price {
+    font-size: 2.5rem; font-weight: 300; letter-spacing: -0.02em;
+    margin-bottom: 0.25rem; line-height: 1;
+  }
+  .package-card.featured .package-price { color: var(--gold-light); }
+  .package-currency { font-size: 1rem; font-weight: 400; vertical-align: super; }
+  .package-period { font-size: 0.75rem; color: var(--muted); margin-bottom: 2rem; }
+  .package-card.featured .package-period { color: rgba(249,245,239,0.4); }
+  .package-features { list-style: none; margin-bottom: 2.5rem; }
+  .package-features li {
+    font-size: 0.84rem; padding: 0.6rem 0;
+    border-bottom: 0.5px solid var(--border-soft);
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .package-card.featured .package-features li { border-color: rgba(255,255,255,0.08); }
+  .package-features li::before {
+    content: ''; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+  .btn {
+    display: block; width: 100%; text-align: center;
+    padding: 0.9rem; font-size: 0.78rem; letter-spacing: 0.15em;
+    text-transform: uppercase; text-decoration: none; font-weight: 500;
+    border: 0.5px solid var(--gold); color: var(--gold);
+    background: transparent; cursor: pointer;
+    transition: all 0.25s;
+  }
+  .btn:hover { background: var(--gold); color: var(--dark); }
+  .btn-primary {
+    background: var(--gold); color: var(--dark); border-color: var(--gold);
+  }
+  .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
 
-/* ── DELIVERABLES ── */
-.deliv-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border); margin-top: 2.5rem;
-}
-.deliv-item {
-  background: var(--bg2); padding: 2rem 1.75rem;
-  transition: background 0.25s;
-}
-.deliv-item:hover { background: var(--gold-pale); }
-.deliv-num {
-  font-family: 'Cormorant Garamond', serif; font-size: 2.5rem;
-  color: var(--gold2); font-weight: 300; line-height: 1; margin-bottom: 0.75rem;
-}
-.deliv-item h4 { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem; }
-.deliv-item p { font-size: 0.8rem; color: var(--mid); line-height: 1.6; }
+  /* ADD-ONS */
+  .addons-table {
+    width: 100%; margin-top: 3rem; border-collapse: collapse;
+  }
+  .addons-table th {
+    font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); font-weight: 400; padding: 0.75rem 1rem;
+    text-align: left; border-bottom: 0.5px solid var(--border-soft);
+  }
+  .addons-table td {
+    padding: 1rem; font-size: 0.87rem;
+    border-bottom: 0.5px solid var(--border-soft);
+  }
+  .addons-table tr:hover td { background: rgba(184,147,90,0.04); }
+  .addon-price { color: var(--gold); font-weight: 500; text-align: right; }
+  .addon-check {
+    width: 20px; height: 20px; border-radius: 50%;
+    border: 0.5px solid var(--border-soft);
+    cursor: pointer; accent-color: var(--gold);
+  }
 
-/* ── COMPLIMENTARY ── */
-.comp-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem; margin-top: 2.5rem;
-}
-.comp-item {
-  display: flex; gap: 1rem; align-items: flex-start;
-  padding: 1.5rem; border: 1px solid var(--border);
-  background: var(--bg2); transition: border-color 0.25s;
-}
-.comp-item:hover { border-color: var(--border-gold); }
-.comp-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--gold); flex-shrink: 0; margin-top: 7px;
-}
-.comp-item h4 { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.25rem; }
-.comp-item p { font-size: 0.78rem; color: var(--mid); line-height: 1.6; }
+  /* TIMELINE */
+  .timeline { margin-top: 3rem; position: relative; }
+  .timeline::before {
+    content: ''; position: absolute; left: 16px; top: 0; bottom: 0;
+    width: 0.5px; background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+  .timeline-item {
+    display: flex; gap: 2rem; padding-left: 0.5rem; margin-bottom: 2.5rem;
+    position: relative;
+  }
+  .timeline-dot {
+    width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+    border: 0.5px solid var(--gold); background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; font-weight: 500; color: var(--gold);
+    position: relative; z-index: 1;
+  }
+  .timeline-content h3 { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.4rem; }
+  .timeline-content p { font-size: 0.83rem; color: var(--muted); }
 
-/* ── PAYMENT PLAN ── */
-.payment-strip {
-  background: var(--ink); padding: 5rem 2rem;
-}
-.payment-inner { max-width: 1080px; margin: 0 auto; }
-.payment-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1px; background: rgba(255,255,255,0.08); margin-top: 2.5rem;
-}
-.payment-step {
-  background: var(--ink); padding: 2rem 1.5rem; position: relative;
-}
-.step-num {
-  font-family: 'Cormorant Garamond', serif; font-size: 3rem;
-  color: rgba(255,255,255,0.07); font-weight: 300;
-  position: absolute; top: 1rem; right: 1.25rem; line-height: 1;
-}
-.step-tag {
-  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 0.6rem;
-}
-.step-amount {
-  font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 400;
-  color: var(--gold2); line-height: 1; margin-bottom: 0.5rem;
-}
-.step-when { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
-.paid-badge {
-  display: inline-block; margin-top: 0.75rem;
-  background: rgba(196,146,58,0.15); color: var(--gold2);
-  border: 1px solid rgba(196,146,58,0.3); font-size: 0.67rem;
-  letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem;
-}
+  /* TERMS */
+  .terms-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem; margin-top: 3rem;
+  }
+  .terms-item h3 { font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; margin-bottom: 0.75rem; }
+  .terms-item p { font-size: 0.83rem; color: var(--muted); line-height: 1.8; }
 
-/* ── TOTAL BOX ── */
-.total-box {
-  max-width: 600px; margin: 2.5rem auto 0;
-}
-.total-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 0.85rem 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  font-size: 0.87rem;
-}
-.total-row .tl { color: rgba(255,255,255,0.45); }
-.total-row .tv { color: rgba(255,255,255,0.85); font-weight: 400; }
-.total-row.grand {
-  border-bottom: none; padding-top: 1.5rem;
-  border-top: 1px solid rgba(196,146,58,0.3);
-  margin-top: 0.5rem;
-}
-.total-row.grand .tl { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
-.total-row.grand .tv {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem; color: var(--gold2); font-weight: 400;
-}
+  /* QUOTE SUMMARY */
+  .quote-box {
+    background: var(--dark); color: var(--cream);
+    padding: 3rem; margin-top: 3rem; position: relative;
+    overflow: hidden;
+  }
+  .quote-box::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+  }
+  .quote-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.75rem 0; border-bottom: 0.5px solid rgba(255,255,255,0.08);
+    font-size: 0.87rem;
+  }
+  .quote-row.total {
+    font-family: 'Playfair Display', serif; font-size: 1.4rem;
+    border-bottom: none; padding-top: 1.5rem;
+  }
+  .quote-row .label { color: rgba(249,245,239,0.55); }
+  .quote-row .value { color: var(--gold-light); font-weight: 400; }
+  .quote-row.total .value { font-size: 1.8rem; color: var(--gold-light); }
 
-/* ── BANK DETAILS ── */
-.bank-card {
-  background: var(--gold-pale); border: 1px solid var(--border-gold);
-  padding: 2rem 2.5rem; margin-top: 3rem; max-width: 480px;
-}
-.bank-card h4 {
-  font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 1.25rem;
-}
-.bank-row {
-  display: flex; gap: 1rem;
-  padding: 0.55rem 0; border-bottom: 1px solid var(--border-gold);
-  font-size: 0.84rem;
-}
-.bank-row:last-child { border-bottom: none; }
-.bank-row .lbl { color: var(--mid); min-width: 100px; }
-.bank-row .val { font-weight: 500; color: var(--ink); }
+  /* CTA */
+  .cta-section {
+    text-align: center; padding: 8rem 2rem;
+    background: var(--warm-white);
+  }
+  .cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .cta-section h2 em { font-style: italic; color: var(--gold); }
+  .cta-section p { color: var(--muted); margin-bottom: 2.5rem; font-size: 0.9rem; max-width: 500px; margin-left: auto; margin-right: auto; margin-bottom: 2.5rem; }
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .cta-btn {
+    padding: 1rem 2.5rem; font-size: 0.78rem; letter-spacing: 0.15em;
+    text-transform: uppercase; font-weight: 500; text-decoration: none;
+    border: 0.5px solid var(--gold); color: var(--dark); background: var(--gold);
+    transition: all 0.25s; cursor: pointer; display: inline-block;
+  }
+  .cta-btn:hover { background: var(--dark); color: var(--cream); border-color: var(--dark); }
+  .cta-btn.outline { background: transparent; border-color: var(--mid); color: var(--mid); }
+  .cta-btn.outline:hover { background: var(--mid); color: var(--cream); }
 
-/* ── TERMS ── */
-.terms-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem; margin-top: 2.5rem;
-}
-.term-item {
-  padding: 1.5rem; border-left: 2px solid var(--gold);
-  padding-left: 1.5rem;
-}
-.term-item h4 {
-  font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
-  font-weight: 500; margin-bottom: 0.6rem; color: var(--ink2);
-}
-.term-item p { font-size: 0.81rem; color: var(--mid); line-height: 1.75; }
+  /* FOOTER */
+  footer {
+    background: var(--dark); color: rgba(249,245,239,0.4);
+    text-align: center; padding: 2.5rem;
+    font-size: 0.78rem; letter-spacing: 0.06em;
+  }
+  footer span { color: var(--gold-light); }
 
-/* ── SIGNATURE BLOCK ── */
-.sig-section {
-  background: var(--ink); padding: 5rem 2rem;
-}
-.sig-inner { max-width: 1080px; margin: 0 auto; }
-.sig-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-  margin-top: 3rem;
-}
-.sig-block h4 {
-  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 1rem;
-}
-.sig-name {
-  font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;
-  color: #fff; font-weight: 300; margin-bottom: 0.3rem;
-}
-.sig-role { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-bottom: 2rem; }
-.sig-line {
-  border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-.sig-meta { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
-.accept-btn {
-  display: inline-block; margin-top: 2rem;
-  background: var(--gold); color: var(--ink);
-  padding: 1rem 2.5rem; font-size: 0.75rem; letter-spacing: 0.15em;
-  text-transform: uppercase; font-weight: 500; cursor: pointer;
-  border: none; transition: background 0.25s; text-decoration: none;
-}
-.accept-btn:hover { background: var(--gold2); }
+  /* MODAL */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(28,24,20,0.7); backdrop-filter: blur(6px);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal {
+    background: var(--cream); padding: 3rem; max-width: 520px; width: 90%;
+    position: relative; transform: translateY(20px); transition: transform 0.3s;
+  }
+  .modal-overlay.open .modal { transform: translateY(0); }
+  .modal-close {
+    position: absolute; top: 1rem; right: 1rem;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.2rem; color: var(--muted);
+  }
+  .modal h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 0.5rem; }
+  .modal p { font-size: 0.85rem; color: var(--muted); margin-bottom: 2rem; }
+  .form-group { margin-bottom: 1.25rem; }
+  .form-group label { display: block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--mid); }
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%; padding: 0.8rem; font-family: 'Jost', sans-serif;
+    border: 0.5px solid var(--border-soft); background: var(--warm-white);
+    font-size: 0.9rem; color: var(--dark); outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group textarea:focus {
+    border-color: var(--gold);
+  }
+  .form-group textarea { resize: vertical; min-height: 80px; }
 
-/* ── FOOTER ── */
-footer {
-  background: #0A0805; padding: 2rem;
-  text-align: center; font-size: 0.75rem;
-  color: rgba(255,255,255,0.25); letter-spacing: 0.05em;
-}
-footer span { color: var(--gold2); }
-
-/* ── ACCEPTED STATE ── */
-.accepted-banner {
-  display: none; background: #1a3a2a; border: 1px solid #2d6b48;
-  padding: 1.25rem 2rem; text-align: center; margin-top: 2rem;
-  color: #7fcca1; font-size: 0.85rem; letter-spacing: 0.05em;
-}
-
-/* ── SCROLL ANIMATION ── */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
-.reveal.in { opacity: 1; transform: translateY(0); }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 700px) {
-  header { padding: 1rem 1.25rem; }
-  nav { display: none; }
-  .client-card { grid-template-columns: 1fr; }
-  .client-side { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .sig-grid { grid-template-columns: 1fr; }
-  .hero-names { font-size: 3rem; }
-  .section { padding: 3.5rem 1.25rem; }
-  .payment-strip, .sig-section { padding: 3.5rem 1.25rem; }
-}
+  /* ANIMATIONS */
+  .fade-up {
+    opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">
-    <div class="logo-mark"><span>V4</span></div>
-    <div>
-      <a class="logo-text" href="#">V4 CLICKS</a>
-      <span class="logo-sub">Photography</span>
-    </div>
-  </div>
-  <nav>
-    <a href="#events">Events</a>
-    <a href="#deliverables">Deliverables</a>
-    <a href="#payment">Payment</a>
-    <a href="#terms">Terms</a>
-    <a href="#sign">Agreement</a>
-  </nav>
-</header>
+<nav>
+  <a href="#" class="nav-logo">LensLore Studio</a>
+  <ul class="nav-links">
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#addons">Add-ons</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#summary">Your Quote</a></li>
+  </ul>
+</nav>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-pattern"></div>
-  <div class="hero-glow"></div>
-  <div style="position:relative">
-    <div class="hero-eyebrow">Event Coverage Agreement</div>
-    <h1 class="hero-names">Puneeth <span class="amp">&</span> Manojna</h1>
-    <p class="hero-tagline">Cinematography &amp; Photography Package — Bride Side</p>
-    <div class="hero-meta">
-      <div class="meta-chip">
-        <span class="label">Client</span>
-        <span class="val">Mr. Chiranjeeva Chary</span>
-      </div>
-      <div class="meta-chip">
-        <span class="label">Events Begin</span>
-        <span class="val">20 March 2026</span>
-      </div>
-      <div class="meta-chip">
-        <span class="label">Wedding</span>
-        <span class="val">03 April 2026</span>
-      </div>
-      <div class="meta-chip">
-        <span class="label">City</span>
-        <span class="val">Hyderabad</span>
-      </div>
+  <div class="hero-bg"></div>
+  <div class="hero-tag">Your Personal Quotation</div>
+  <h1>Arjun <em>&</em> Priya</h1>
+  <p class="hero-sub">Wedding Photography & Cinematic Film</p>
+  <p class="hero-date">17 February 2026 · Falaknuma Palace, Hyderabad</p>
+  <a href="#packages" class="hero-scroll">
+    <div class="scroll-line"></div>
+    Explore
+  </a>
+</div>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <p>"Every frame we capture is a love letter — written in light, sealed in time, treasured forever."</p>
+</div>
+
+<!-- WHAT'S INCLUDED -->
+<section class="fade-up">
+  <div class="section-tag">Every Package Includes</div>
+  <h2 class="section-title">What we bring to <em>your day</em></h2>
+  <div class="divider"></div>
+  <div class="included-grid">
+    <div class="included-item">
+      <div class="included-icon">📸</div>
+      <h3>Full Coverage</h3>
+      <p>From the first ritual to the last dance</p>
     </div>
-  </div>
-  <div class="hero-divider"></div>
-</div>
-
-<!-- CLIENT DETAILS -->
-<div class="client-card reveal">
-  <div class="client-side">
-    <p class="eyebrow">Client Details</p>
-    <h3>Mr. Chiranjeeva Chary</h3>
-    <div class="info-row"><span class="lbl">Address</span><span class="val">Hyderabad</span></div>
-    <div class="info-row"><span class="lbl">Email</span><span class="val"><a href="mailto:">@gmail.com</a></span></div>
-    <div class="info-row"><span class="lbl">Phone</span><span class="val"><a href="tel:+919632251203">+91 96322 51203</a></span></div>
-    <div class="info-row"><span class="lbl">Alt. Phone</span><span class="val"><a href="tel:+918784731540">+91 87847 31540</a></span></div>
-    <div class="info-row"><span class="lbl">Signed</span><span class="val">17 February 2026 · Hyderabad</span></div>
-  </div>
-  <div class="client-side">
-    <p class="eyebrow">Studio Details</p>
-    <h3>V4 Clicks</h3>
-    <div class="info-row"><span class="lbl">Contact</span><span class="val">Praveen Kumar &amp; Vijay Sriramoju</span></div>
-    <div class="info-row"><span class="lbl">Phone</span><span class="val"><a href="tel:+919908331555" style="color:var(--gold2)">+91 99083 31555</a></span></div>
-    <div class="info-row"><span class="lbl">Alt. Phone</span><span class="val"><a href="tel:+918008086876" style="color:var(--gold2)">+91 80080 86876</a></span></div>
-    <div class="info-row"><span class="lbl">Email</span><span class="val"><a href="mailto:praveen31555@gmail.com" style="color:var(--gold2)">praveen31555@gmail.com</a></span></div>
-    <div class="info-row"><span class="lbl">City</span><span class="val">Hyderabad</span></div>
-  </div>
-</div>
-
-<!-- EVENTS -->
-<section id="events" class="section reveal">
-  <p class="eyebrow">Coverage Schedule</p>
-  <h2 class="section-h">Events &amp; <em>team deployment</em></h2>
-  <div class="rule"></div>
-  <div class="events-wrap">
-    <table class="events-table">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Date &amp; Time</th>
-          <th>Venue</th>
-          <th>Team</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div class="event-name">Engagement</div>
-          </td>
-          <td class="date-cell">20 March 2026<br><span style="color:var(--muted);font-size:0.78rem">Morning · 10:00 AM</span></td>
-          <td>
-            <div>Papadams Blue Banquet Hall</div>
-            <div class="venue">Kothapet, Hyderabad</div>
-          </td>
-          <td>
-            <span class="team-tag">Traditional Photography</span>
-            <span class="team-tag">Traditional Video</span>
-            <span class="team-tag">Candid Photography</span>
-            <span class="team-tag">Cinematography</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="event-name">Bride Functions</div>
-            <div class="venue">Haldi, Mehendi &amp; more</div>
-          </td>
-          <td class="date-cell">01–02 April 2026</td>
-          <td>
-            <div>Hyderabad</div>
-            <div class="venue">Venue TBD</div>
-          </td>
-          <td>
-            <span class="team-tag">Traditional Photography</span>
-            <span class="team-tag">Traditional Video</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="event-name">Bridegroom Functions</div>
-          </td>
-          <td class="date-cell">01–02 April 2026</td>
-          <td>
-            <div>Hyderabad</div>
-            <div class="venue">Venue TBD</div>
-          </td>
-          <td>
-            <span class="team-tag">Traditional Photography</span>
-            <span class="team-tag">Traditional Video</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="event-name">Wedding</div>
-          </td>
-          <td class="date-cell">03 April 2026<br><span style="color:var(--muted);font-size:0.78rem">Morning</span></td>
-          <td>
-            <div>Bliss Convention</div>
-            <div class="venue">Near Nagole Shilparamam, Hyderabad</div>
-          </td>
-          <td>
-            <span class="team-tag">2 Traditional Photographers</span>
-            <span class="team-tag">2 Traditional Videographers</span>
-            <span class="team-tag">Candid Photography</span>
-            <span class="team-tag">Cinematography</span>
-            <span class="team-tag">Drone</span>
-            <span class="team-tag">Live Streaming</span>
-            <span class="team-tag">LED Screen 8×12</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="event-name">Vratham</div>
-          </td>
-          <td class="date-cell">Hyderabad</td>
-          <td>
-            <div>Hyderabad</div>
-            <div class="venue">Venue TBD</div>
-          </td>
-          <td>
-            <span class="team-tag">Traditional Photography</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- DELIVERABLES -->
-<section id="deliverables" class="section reveal" style="background:var(--bg2);max-width:100%;padding:5rem 0;">
-  <div class="section-inner">
-    <p class="eyebrow">What You Receive</p>
-    <h2 class="section-h">Standard <em>deliverables</em></h2>
-    <div class="rule"></div>
-    <div class="deliv-grid">
-      <div class="deliv-item">
-        <div class="deliv-num">2–3</div>
-        <h4>Weeks · Preview Files</h4>
-        <p>10–20 low-resolution preview photos shared for social media &amp; family within 2–3 weeks of the event.</p>
-      </div>
-      <div class="deliv-item">
-        <div class="deliv-num">4–6</div>
-        <h4>Weeks · Online Gallery</h4>
-        <p>Password-protected high-resolution gallery, accessible worldwide for 10 years. 250+ print-ready photos on DVD.</p>
-      </div>
-      <div class="deliv-item">
-        <div class="deliv-num">1–2</div>
-        <h4>Min Teaser Film</h4>
-        <p>A short cinematic wedding teaser delivered with the gallery (Cinematography packages only).</p>
-      </div>
-      <div class="deliv-item">
-        <div class="deliv-num">8–10</div>
-        <h4>Weeks · Full Videos</h4>
-        <p>Long-form edited videos of all events, delivered separately in custom-printed DVDs (two copies).</p>
-      </div>
-      <div class="deliv-item">
-        <div class="deliv-num">4–6</div>
-        <h4>Min Cinematic Trailer</h4>
-        <p>A full cinematic trailer of the wedding (Cinematography packages only).</p>
-      </div>
-      <div class="deliv-item">
-        <div class="deliv-num">6–10</div>
-        <h4>Weeks · Signature Album</h4>
-        <p>Customised coffee table book with 125–150 best pictures, printed after client approval of the layout.</p>
-      </div>
+    <div class="included-item">
+      <div class="included-icon">🎞</div>
+      <h3>Edited Gallery</h3>
+      <p>Colour-graded, curated, high resolution</p>
+    </div>
+    <div class="included-item">
+      <div class="included-icon">☁️</div>
+      <h3>Cloud Delivery</h3>
+      <p>Private password-protected gallery</p>
+    </div>
+    <div class="included-item">
+      <div class="included-icon">🤝</div>
+      <h3>Pre-shoot Meeting</h3>
+      <p>Plan every moment together</p>
+    </div>
+    <div class="included-item">
+      <div class="included-icon">🖨</div>
+      <h3>Print Ready Files</h3>
+      <p>All exports at maximum resolution</p>
     </div>
   </div>
 </section>
 
-<!-- COMPLIMENTARY -->
-<section class="section reveal">
-  <p class="eyebrow">Included at No Extra Cost</p>
-  <h2 class="section-h">Complimentary <em>inclusions</em></h2>
-  <div class="rule"></div>
-  <div class="comp-grid">
-    <div class="comp-item">
-      <div class="comp-dot"></div>
-      <div>
-        <h4>Canvera Albums — 3+3</h4>
-        <p>Premium quality albums of client choice: Engagement 30 spreads (both sides), Bride 30 spreads, Bridegroom 30 spreads, Wedding 40 spreads (both sides). Up to 100 spreads total.</p>
+<!-- PACKAGES -->
+<section id="packages" class="fade-up">
+  <div class="section-tag">Our Offerings</div>
+  <h2 class="section-title">Choose your <em>story</em></h2>
+  <div class="divider"></div>
+  <div class="packages-grid">
+
+    <div class="package-card">
+      <p class="package-name">Petals</p>
+      <p class="package-tagline">Intimate & beautiful</p>
+      <div class="package-price"><span class="package-currency">₹</span>85,000</div>
+      <p class="package-period">One-time investment</p>
+      <ul class="package-features">
+        <li>1 Photographer · 1 day</li>
+        <li>8–10 hours of coverage</li>
+        <li>500+ edited photos</li>
+        <li>Private online gallery</li>
+        <li>4-week delivery</li>
+      </ul>
+      <a class="btn" href="#" onclick="openModal('Petals — ₹85,000')">Select Package</a>
+    </div>
+
+    <div class="package-card featured">
+      <div class="featured-badge">Recommended for You</div>
+      <p class="package-name">Bloom</p>
+      <p class="package-tagline">Most loved by our couples</p>
+      <div class="package-price"><span class="package-currency">₹</span>1,45,000</div>
+      <p class="package-period">One-time investment</p>
+      <ul class="package-features">
+        <li>2 Photographers · 2 days</li>
+        <li>Full wedding & mehendi</li>
+        <li>1000+ edited photos</li>
+        <li>30-min cinematic film</li>
+        <li>Printed photo book</li>
+        <li>3-week delivery</li>
+      </ul>
+      <a class="btn btn-primary" href="#" onclick="openModal('Bloom — ₹1,45,000')">Select Package</a>
+    </div>
+
+    <div class="package-card">
+      <p class="package-name">Eternal</p>
+      <p class="package-tagline">The full experience</p>
+      <div class="package-price"><span class="package-currency">₹</span>2,20,000</div>
+      <p class="package-period">One-time investment</p>
+      <ul class="package-features">
+        <li>3 Photographers · 3 days</li>
+        <li>All functions covered</li>
+        <li>1500+ edited photos</li>
+        <li>60-min cinematic film</li>
+        <li>Drone aerial shots</li>
+        <li>Premium album + canvas</li>
+        <li>2-week rush delivery</li>
+      </ul>
+      <a class="btn" href="#" onclick="openModal('Eternal — ₹2,20,000')">Select Package</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section id="addons" class="fade-up">
+  <div class="section-tag">Customise Further</div>
+  <h2 class="section-title">Curated <em>add-ons</em></h2>
+  <div class="divider"></div>
+  <p style="color: var(--muted); font-size: 0.87rem;">Handpick extras to make your package truly yours.</p>
+
+  <table class="addons-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Add-on</th>
+        <th>Details</th>
+        <th style="text-align:right">Price</th>
+      </tr>
+    </thead>
+    <tbody id="addon-body">
+      <tr data-price="25000">
+        <td><input type="checkbox" class="addon-check" onchange="updateTotal()"></td>
+        <td>Drone Videography</td>
+        <td style="color: var(--muted); font-size:0.82rem">Aerial cinematic shots</td>
+        <td class="addon-price">₹25,000</td>
+      </tr>
+      <tr data-price="18000">
+        <td><input type="checkbox" class="addon-check" onchange="updateTotal()"></td>
+        <td>Pre-Wedding Shoot</td>
+        <td style="color: var(--muted); font-size:0.82rem">4 hours at a location of choice</td>
+        <td class="addon-price">₹18,000</td>
+      </tr>
+      <tr data-price="12000">
+        <td><input type="checkbox" class="addon-check" onchange="updateTotal()"></td>
+        <td>Premium Album</td>
+        <td style="color: var(--muted); font-size:0.82rem">30 pages · lay-flat binding</td>
+        <td class="addon-price">₹12,000</td>
+      </tr>
+      <tr data-price="8000">
+        <td><input type="checkbox" class="addon-check" onchange="updateTotal()"></td>
+        <td>Canvas Print (24"×36")</td>
+        <td style="color: var(--muted); font-size:0.82rem">1 large format canvas</td>
+        <td class="addon-price">₹8,000</td>
+      </tr>
+      <tr data-price="15000">
+        <td><input type="checkbox" class="addon-check" onchange="updateTotal()"></td>
+        <td>Second Venue Coverage</td>
+        <td style="color: var(--muted); font-size:0.82rem">Additional location same day</td>
+        <td class="addon-price">₹15,000</td>
+      </tr>
+      <tr data-price="10000">
+        <td><input type="checkbox" class="addon-check" onchange="updateTotal()"></td>
+        <td>Rush Delivery</td>
+        <td style="color: var(--muted); font-size:0.82rem">Gallery ready in 7 days</td>
+        <td class="addon-price">₹10,000</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="fade-up">
+  <div class="section-tag">Our Process</div>
+  <h2 class="section-title">How it <em>unfolds</em></h2>
+  <div class="divider"></div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot">01</div>
+      <div class="timeline-content">
+        <h3>Booking & Agreement</h3>
+        <p>Sign the contract & confirm your date with a 30% advance payment.</p>
       </div>
     </div>
-    <div class="comp-item">
-      <div class="comp-dot"></div>
-      <div>
-        <h4>Full-Length Edited Videos</h4>
-        <p>All events' full-length edited videos delivered in a Pendrive.</p>
+    <div class="timeline-item">
+      <div class="timeline-dot">02</div>
+      <div class="timeline-content">
+        <h3>Pre-Wedding Consultation</h3>
+        <p>We meet (in-person or virtually) to understand your vision, timeline & shot list.</p>
       </div>
     </div>
-    <div class="comp-item">
-      <div class="comp-dot"></div>
-      <div>
-        <h4>Cinematic Teasers</h4>
-        <p>Engagement, Bride Haldi &amp; Wedding cinematic teasers included.</p>
+    <div class="timeline-item">
+      <div class="timeline-dot">03</div>
+      <div class="timeline-content">
+        <h3>The Wedding Day</h3>
+        <p>Our team arrives before events begin — capturing every candid, every emotion.</p>
       </div>
     </div>
-    <div class="comp-item">
-      <div class="comp-dot"></div>
-      <div>
-        <h4>Invitation Videos</h4>
-        <p>Engagement &amp; Wedding invitation videos for both bride and groom side.</p>
+    <div class="timeline-item">
+      <div class="timeline-dot">04</div>
+      <div class="timeline-content">
+        <h3>Editing & Curation</h3>
+        <p>Expert colour grading & selection — only the best frames make it to you.</p>
       </div>
     </div>
-    <div class="comp-item">
-      <div class="comp-dot"></div>
-      <div>
-        <h4>Invitation Cards</h4>
-        <p>Engagement &amp; Wedding invitation cards for both sides.</p>
-      </div>
-    </div>
-    <div class="comp-item">
-      <div class="comp-dot"></div>
-      <div>
-        <h4>Photo Frames &amp; Calendars</h4>
-        <p>2 photo frames and calendars for both sides.</p>
-      </div>
-    </div>
-    <div class="comp-item">
-      <div class="comp-dot"></div>
-      <div>
-        <h4>Flex &amp; Car Stickers</h4>
-        <p>4 flex banners and car stickers for both sides.</p>
+    <div class="timeline-item">
+      <div class="timeline-dot">05</div>
+      <div class="timeline-content">
+        <h3>Gallery Delivery</h3>
+        <p>You receive a private link to download all photos in full resolution.</p>
       </div>
     </div>
   </div>
 </section>
-
-<!-- PAYMENT PLAN -->
-<div id="payment" class="payment-strip reveal">
-  <div class="payment-inner">
-    <p class="eyebrow" style="color:var(--gold)">Investment &amp; Payment Schedule</p>
-    <h2 class="section-h" style="color:#fff;">Your <em style="color:var(--gold2)">payment plan</em></h2>
-    <div class="rule"></div>
-
-    <div class="payment-grid">
-      <div class="payment-step">
-        <div class="step-num">01</div>
-        <div class="step-tag">Advance · Paid ✓</div>
-        <div class="step-amount">₹25,000</div>
-        <div class="step-when">At time of booking</div>
-        <div class="paid-badge">Received 16 Feb 2026 · UPI</div>
-      </div>
-      <div class="payment-step">
-        <div class="step-num">02</div>
-        <div class="step-tag">Engagement Payment</div>
-        <div class="step-amount">₹1,25,000</div>
-        <div class="step-when">At time of Engagement event<br>20 March 2026</div>
-      </div>
-      <div class="payment-step">
-        <div class="step-num">03</div>
-        <div class="step-tag">Wedding Payment</div>
-        <div class="step-amount">₹2,00,000</div>
-        <div class="step-when">At time of Wedding events<br>03 April 2026</div>
-      </div>
-      <div class="payment-step">
-        <div class="step-num">04</div>
-        <div class="step-tag">Final Payment</div>
-        <div class="step-amount">₹50,000</div>
-        <div class="step-when">After delivering albums<br>&amp; videos</div>
-      </div>
-    </div>
-
-    <div class="total-box">
-      <div class="total-row"><span class="tl">Advance Paid</span><span class="tv">₹25,000 ✓</span></div>
-      <div class="total-row"><span class="tl">At Engagement</span><span class="tv">₹1,25,000</span></div>
-      <div class="total-row"><span class="tl">At Wedding</span><span class="tv">₹2,00,000</span></div>
-      <div class="total-row"><span class="tl">After Delivery</span><span class="tv">₹50,000</span></div>
-      <div class="total-row grand">
-        <span class="tl">Total Package</span>
-        <span class="tv">₹4,00,500</span>
-      </div>
-    </div>
-
-    <!-- BANK DETAILS -->
-    <div class="bank-card">
-      <h4>Payment Details</h4>
-      <div class="bank-row"><span class="lbl">Name</span><span class="val">Sriramoju Vijay Chary</span></div>
-      <div class="bank-row"><span class="lbl">Bank</span><span class="val">IndusInd Bank</span></div>
-      <div class="bank-row"><span class="lbl">Account No.</span><span class="val">158008086876</span></div>
-      <div class="bank-row"><span class="lbl">IFSC</span><span class="val">INDB0000839</span></div>
-      <div class="bank-row"><span class="lbl">Branch</span><span class="val">LB Nagar</span></div>
-    </div>
-  </div>
-</div>
 
 <!-- TERMS -->
-<section id="terms" class="section reveal">
-  <p class="eyebrow">Policies &amp; Agreement</p>
-  <h2 class="section-h">Terms &amp; <em>conditions</em></h2>
-  <div class="rule"></div>
+<section class="fade-up">
+  <div class="section-tag">Policies</div>
+  <h2 class="section-title">Simple, <em>honest</em> terms</h2>
+  <div class="divider"></div>
   <div class="terms-grid">
-    <div class="term-item">
-      <h4>Copyright</h4>
-      <p>All photographs created by V4 Clicks are copyright protected. It is a violation of copyright law to copy, scan, reproduce, or alter images without express written permission. You have the right to home use — printing for personal family albums. Negatives and digital files remain the sole property of V4 Clicks.</p>
+    <div class="terms-item">
+      <h3>Payment Schedule</h3>
+      <p>30% to confirm the booking. 40% one month before the wedding. 30% on the wedding day.</p>
     </div>
-    <div class="term-item">
-      <h4>Exclusivity</h4>
-      <p>V4 Clicks must be the exclusive professional photographer for the event. Additional professional photographers may be employed only with prior written permission. Guest photographers are welcome; however, the photographer will request client intervention if a guest inhibits full documentation.</p>
+    <div class="terms-item">
+      <h3>Cancellation</h3>
+      <p>Advance is non-refundable. Cancellations within 30 days of the event forfeit 70% of the total.</p>
     </div>
-    <div class="term-item">
-      <h4>Limits of Liability</h4>
-      <p>V4 Clicks' entire liability is limited to a refund of the amount paid. V4 Clicks cannot guarantee delivery of specifically requested images. In the event of personal illness or circumstance, a substitute will be sent. V4 Clicks is not liable for incomplete coverage caused by tardiness or restrictions placed by client or outside vendors.</p>
+    <div class="terms-item">
+      <h3>Rescheduling</h3>
+      <p>One free reschedule up to 60 days before the event, subject to availability.</p>
     </div>
-    <div class="term-item">
-      <h4>Permissions</h4>
-      <p>It is the client's responsibility to schedule and obtain permission to use various locations for photography, including the event location and any other locations used during the day.</p>
+    <div class="terms-item">
+      <h3>Delivery Timeline</h3>
+      <p>Standard delivery is 3–4 weeks. Rush delivery (1 week) is available as an add-on.</p>
     </div>
-    <div class="term-item">
-      <h4>Retainer / Advance</h4>
-      <p>A non-refundable retainer of 33% on the agreed package is due at booking. V4 Clicks will not reserve the date until receipt of the retainer. The retainer may not be transferred to another party without prior written consent.</p>
+    <div class="terms-item">
+      <h3>Usage Rights</h3>
+      <p>You retain personal usage rights. LensLore may use select images for portfolio with your approval.</p>
     </div>
-    <div class="term-item">
-      <h4>Model Release</h4>
-      <p>V4 Clicks may use select photographs for portfolio, samples, self-promotion, advertisement, or professional competition. Reproductions for any other use require written permission from the client. Any modifications to this agreement must be made in writing.</p>
+    <div class="terms-item">
+      <h3>Travel</h3>
+      <p>Travel within Hyderabad is complimentary. Outstation travel billed at actuals.</p>
     </div>
   </div>
 </section>
 
-<!-- SIGNATURE / ACCEPTANCE -->
-<div id="sign" class="sig-section reveal">
-  <div class="sig-inner">
-    <p class="eyebrow" style="color:var(--gold)">Agreement Acceptance</p>
-    <h2 class="section-h" style="color:#fff;">We confirm <em style="color:var(--gold2)">all terms</em></h2>
-    <div class="rule"></div>
-
-    <div class="sig-grid">
-      <div class="sig-block">
-        <h4>Client</h4>
-        <div class="sig-name">Mr. Chiranjeeva Chary</div>
-        <div class="sig-role">Client — Father of the Bride/Groom</div>
-        <div class="sig-line"></div>
-        <div class="sig-meta">Signature &nbsp;·&nbsp; Date: 17 February 2026 &nbsp;·&nbsp; Place: Hyderabad</div>
-        <button class="accept-btn" onclick="acceptQuote()">✓ Accept &amp; Confirm Agreement</button>
-        <div class="accepted-banner" id="accept-banner">
-          ✓ Agreement accepted — V4 Clicks has been notified. We look forward to capturing your special day!
-        </div>
-      </div>
-      <div class="sig-block">
-        <h4>Photographer / Studio</h4>
-        <div class="sig-name">V4 Clicks</div>
-        <div class="sig-role">Praveen Kumar Sriramoju &amp; Vijay Sriramoju</div>
-        <div class="sig-line"></div>
-        <div class="sig-meta">Signature &nbsp;·&nbsp; Date: 17 February 2026 &nbsp;·&nbsp; Place: Hyderabad</div>
-        <div style="margin-top:2rem;">
-          <div style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-bottom:0.5rem;">Need to talk?</div>
-          <a href="https://wa.me/919908331555" target="_blank" class="accept-btn" style="display:inline-block;background:transparent;border:1px solid var(--gold);color:var(--gold2);">WhatsApp Us</a>
-        </div>
-      </div>
+<!-- QUOTE SUMMARY -->
+<section id="summary" class="fade-up" style="max-width: 700px;">
+  <div class="section-tag">Your Investment</div>
+  <h2 class="section-title">Custom <em>quote</em> summary</h2>
+  <div class="divider"></div>
+  <div class="quote-box">
+    <div class="quote-row">
+      <span class="label">Selected Package</span>
+      <span class="value" id="summary-package">—</span>
     </div>
+    <div class="quote-row">
+      <span class="label">Package Price</span>
+      <span class="value" id="summary-base">₹0</span>
+    </div>
+    <div class="quote-row">
+      <span class="label">Add-ons</span>
+      <span class="value" id="summary-addons">₹0</span>
+    </div>
+    <div class="quote-row">
+      <span class="label">GST (18%)</span>
+      <span class="value" id="summary-gst">₹0</span>
+    </div>
+    <div class="quote-row total">
+      <span class="label" style="color: rgba(249,245,239,0.7); font-size:1rem">Total</span>
+      <span class="value" id="summary-total">₹0</span>
+    </div>
+  </div>
+  <p style="font-size:0.78rem; color: var(--muted); margin-top: 1rem;">Select a package above to populate your quote automatically.</p>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Ready to say <em>yes</em>?</h2>
+  <p>This quote is valid until 30 November 2025. Dates fill up fast — we'd love to hold yours.</p>
+  <div class="cta-buttons">
+    <a class="cta-btn" href="#" onclick="openModal('Book Now')">Book Your Date</a>
+    <a class="cta-btn outline" href="https://wa.me/919876543210" target="_blank">WhatsApp Us</a>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>Agreement prepared by <span>V4 Clicks Photography</span> · Hyderabad · <span>praveen31555@gmail.com</span> · +91 99083 31555 / +91 80080 86876</p>
-  <p style="margin-top:0.5rem;font-size:0.68rem;">This document is confidential and intended solely for Mr. Chiranjeeva Chary.</p>
+  <p>Crafted with love by <span>LensLore Studio</span> · Hyderabad · lenslore@studio.in · +91 98765 43210</p>
 </footer>
 
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3>Let's make it official</h3>
+    <p id="modal-desc">You're one step away from securing your date.</p>
+    <div class="form-group">
+      <label>Your Name(s)</label>
+      <input type="text" placeholder="Arjun & Priya" value="Arjun & Priya">
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" placeholder="+91 00000 00000">
+    </div>
+    <div class="form-group">
+      <label>Wedding Date</label>
+      <input type="date" value="2026-02-17">
+    </div>
+    <div class="form-group">
+      <label>Message (optional)</label>
+      <textarea placeholder="Any questions or special requests…"></textarea>
+    </div>
+    <button class="btn btn-primary" onclick="submitForm()" style="width:100%;padding:1rem;font-size:0.82rem;letter-spacing:0.12em;cursor:pointer">Confirm Enquiry →</button>
+  </div>
+</div>
+
 <script>
-  // Accept handler
-  function acceptQuote() {
-    document.getElementById('accept-banner').style.display = 'block';
-    document.querySelector('.accept-btn').disabled = true;
-    document.querySelector('.accept-btn').style.opacity = '0.5';
-    document.querySelector('.accept-btn').textContent = '✓ Agreement Accepted';
+  // Package selection state
+  let selectedBase = 0;
+  let selectedName = '—';
+  let addonTotal = 0;
+
+  // Attach click to package buttons
+  document.querySelectorAll('.package-card .btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const card = this.closest('.package-card');
+      const name = card.querySelector('.package-name').textContent;
+      const priceText = card.querySelector('.package-price').textContent;
+      const price = parseInt(priceText.replace(/[^0-9]/g, ''));
+      selectedBase = price;
+      selectedName = name;
+      updateTotal();
+      // Scroll to summary
+      document.getElementById('summary').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  function updateTotal() {
+    addonTotal = 0;
+    document.querySelectorAll('#addon-body tr').forEach(row => {
+      const cb = row.querySelector('input[type=checkbox]');
+      if (cb && cb.checked) {
+        addonTotal += parseInt(row.dataset.price);
+      }
+    });
+    const subtotal = selectedBase + addonTotal;
+    const gst = Math.round(subtotal * 0.18);
+    const total = subtotal + gst;
+
+    document.getElementById('summary-package').textContent = selectedName;
+    document.getElementById('summary-base').textContent = selectedBase ? '₹' + selectedBase.toLocaleString('en-IN') : '—';
+    document.getElementById('summary-addons').textContent = addonTotal ? '₹' + addonTotal.toLocaleString('en-IN') : '₹0';
+    document.getElementById('summary-gst').textContent = subtotal ? '₹' + gst.toLocaleString('en-IN') : '₹0';
+    document.getElementById('summary-total').textContent = total ? '₹' + total.toLocaleString('en-IN') : '₹0';
   }
 
-  // Scroll reveal
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // Modal
+  function openModal(context) {
+    document.getElementById('modal-desc').textContent = context ? 'Enquiring about: ' + context : 'You\'re one step away from securing your date.';
+    document.getElementById('modal').classList.add('open');
+  }
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+  }
+  document.getElementById('modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  function submitForm() {
+    closeModal();
+    alert('Thank you! We\'ll be in touch within 24 hours. 💛');
+  }
+
+  // Fade-up on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
