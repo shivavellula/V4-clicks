@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puneeth & Manojna — Event Coverage Quote by V4 Clicks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #0F0D0A;
+  --ink2: #2C2720;
+  --mid: #6B5F55;
+  --muted: #A09189;
+  --bg: #F8F4EF;
+  --bg2: #FFFFFF;
+  --gold: #C4923A;
+  --gold2: #E2B570;
+  --gold-pale: #FBF3E6;
+  --border: rgba(15,13,10,0.09);
+  --border-gold: rgba(196,146,58,0.3);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-weight: 300;
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+/* ── HEADER ── */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 3rem;
+  background: rgba(248,244,239,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.logo {
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.logo-mark {
+  width: 38px; height: 38px;
+  background: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-mark span {
+  color: var(--gold2);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600; font-size: 1rem; letter-spacing: 0.02em;
+}
+.logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 600; letter-spacing: 0.06em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.logo-sub {
+  font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); display: block; margin-top: -2px;
+}
+nav { display: flex; gap: 2rem; }
+nav a {
+  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--mid); text-decoration: none; transition: color 0.2s;
+}
+nav a:hover { color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid; place-items: center;
+  text-align: center;
+  padding: 9rem 2rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-pattern {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image:
+    repeating-linear-gradient(0deg, var(--ink) 0, var(--ink) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(90deg, var(--ink) 0, var(--ink) 1px, transparent 1px, transparent 60px);
+}
+.hero-glow {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 80%, rgba(196,146,58,0.14) 0%, transparent 70%);
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 2rem;
+  position: relative;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: ''; display: block; width: 32px; height: 1px; background: var(--gold2);
+}
+.hero-names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 300; line-height: 1;
+  margin-bottom: 0.5rem; position: relative;
+}
+.hero-names .amp {
+  font-style: italic; color: var(--gold); font-weight: 300;
+}
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  color: var(--mid); margin-bottom: 2.5rem;
+}
+.hero-meta {
+  display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 3.5rem; position: relative;
+}
+.meta-chip {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0.25rem;
+}
+.meta-chip .label {
+  font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+}
+.meta-chip .val {
+  font-size: 0.88rem; color: var(--ink2); font-weight: 400;
+}
+.hero-divider {
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 1px; height: 60px;
+  background: linear-gradient(to bottom, var(--gold2), transparent);
+}
+
+/* ── SECTIONS ── */
+.section {
+  max-width: 1080px; margin: 0 auto;
+  padding: 5rem 2rem;
+}
+.section-full { padding: 5rem 0; }
+.section-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+
+.eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.75rem;
+}
+.section-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.section-h em { font-style: italic; color: var(--gold); }
+.rule {
+  width: 48px; height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  margin: 1.25rem 0 2.5rem;
+}
+
+/* ── CLIENT CARD ── */
+.client-card {
+  background: var(--ink); color: var(--bg);
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.client-side {
+  padding: 3.5rem;
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+.client-side:last-child { border-right: none; }
+.client-side .eyebrow { color: var(--gold2); }
+.client-side h3 {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400;
+  margin-bottom: 1.5rem; color: #fff;
+}
+.info-row {
+  display: flex; gap: 0.75rem;
+  padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-size: 0.83rem;
+}
+.info-row .lbl { color: rgba(255,255,255,0.4); min-width: 70px; }
+.info-row .val { color: rgba(255,255,255,0.85); }
+.info-row .val a { color: var(--gold2); text-decoration: none; }
+
+/* ── EVENTS TABLE ── */
+.events-wrap { overflow-x: auto; margin-top: 2rem; }
+.events-table {
+  width: 100%; border-collapse: collapse; min-width: 700px;
+}
+.events-table thead tr {
+  background: var(--ink);
+}
+.events-table th {
+  padding: 0.85rem 1.25rem;
+  font-size: 0.67rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold2); font-weight: 400; text-align: left;
+}
+.events-table td {
+  padding: 1rem 1.25rem; font-size: 0.85rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.events-table tr:hover td { background: var(--gold-pale); }
+.events-table .event-name { font-weight: 500; }
+.events-table .venue { color: var(--mid); font-size: 0.8rem; margin-top: 0.2rem; }
+.team-tag {
+  display: inline-block;
+  background: var(--gold-pale); color: var(--gold);
+  border: 1px solid var(--border-gold);
+  font-size: 0.7rem; padding: 0.2rem 0.6rem;
+  margin: 0.15rem 0.1rem 0.15rem 0;
+  border-radius: 2px;
+}
+.date-cell { color: var(--ink2); font-weight: 400; white-space: nowrap; }
+
+/* ── DELIVERABLES ── */
+.deliv-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); margin-top: 2.5rem;
+}
+.deliv-item {
+  background: var(--bg2); padding: 2rem 1.75rem;
+  transition: background 0.25s;
+}
+.deliv-item:hover { background: var(--gold-pale); }
+.deliv-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 2.5rem;
+  color: var(--gold2); font-weight: 300; line-height: 1; margin-bottom: 0.75rem;
+}
+.deliv-item h4 { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem; }
+.deliv-item p { font-size: 0.8rem; color: var(--mid); line-height: 1.6; }
+
+/* ── COMPLIMENTARY ── */
+.comp-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem; margin-top: 2.5rem;
+}
+.comp-item {
+  display: flex; gap: 1rem; align-items: flex-start;
+  padding: 1.5rem; border: 1px solid var(--border);
+  background: var(--bg2); transition: border-color 0.25s;
+}
+.comp-item:hover { border-color: var(--border-gold); }
+.comp-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0; margin-top: 7px;
+}
+.comp-item h4 { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.25rem; }
+.comp-item p { font-size: 0.78rem; color: var(--mid); line-height: 1.6; }
+
+/* ── PAYMENT PLAN ── */
+.payment-strip {
+  background: var(--ink); padding: 5rem 2rem;
+}
+.payment-inner { max-width: 1080px; margin: 0 auto; }
+.payment-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px; background: rgba(255,255,255,0.08); margin-top: 2.5rem;
+}
+.payment-step {
+  background: var(--ink); padding: 2rem 1.5rem; position: relative;
+}
+.step-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 3rem;
+  color: rgba(255,255,255,0.07); font-weight: 300;
+  position: absolute; top: 1rem; right: 1.25rem; line-height: 1;
+}
+.step-tag {
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.6rem;
+}
+.step-amount {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 400;
+  color: var(--gold2); line-height: 1; margin-bottom: 0.5rem;
+}
+.step-when { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+.paid-badge {
+  display: inline-block; margin-top: 0.75rem;
+  background: rgba(196,146,58,0.15); color: var(--gold2);
+  border: 1px solid rgba(196,146,58,0.3); font-size: 0.67rem;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem;
+}
+
+/* ── TOTAL BOX ── */
+.total-box {
+  max-width: 600px; margin: 2.5rem auto 0;
+}
+.total-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.85rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-size: 0.87rem;
+}
+.total-row .tl { color: rgba(255,255,255,0.45); }
+.total-row .tv { color: rgba(255,255,255,0.85); font-weight: 400; }
+.total-row.grand {
+  border-bottom: none; padding-top: 1.5rem;
+  border-top: 1px solid rgba(196,146,58,0.3);
+  margin-top: 0.5rem;
+}
+.total-row.grand .tl { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+.total-row.grand .tv {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem; color: var(--gold2); font-weight: 400;
+}
+
+/* ── BANK DETAILS ── */
+.bank-card {
+  background: var(--gold-pale); border: 1px solid var(--border-gold);
+  padding: 2rem 2.5rem; margin-top: 3rem; max-width: 480px;
+}
+.bank-card h4 {
+  font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.25rem;
+}
+.bank-row {
+  display: flex; gap: 1rem;
+  padding: 0.55rem 0; border-bottom: 1px solid var(--border-gold);
+  font-size: 0.84rem;
+}
+.bank-row:last-child { border-bottom: none; }
+.bank-row .lbl { color: var(--mid); min-width: 100px; }
+.bank-row .val { font-weight: 500; color: var(--ink); }
+
+/* ── TERMS ── */
+.terms-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem; margin-top: 2.5rem;
+}
+.term-item {
+  padding: 1.5rem; border-left: 2px solid var(--gold);
+  padding-left: 1.5rem;
+}
+.term-item h4 {
+  font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
+  font-weight: 500; margin-bottom: 0.6rem; color: var(--ink2);
+}
+.term-item p { font-size: 0.81rem; color: var(--mid); line-height: 1.75; }
+
+/* ── SIGNATURE BLOCK ── */
+.sig-section {
+  background: var(--ink); padding: 5rem 2rem;
+}
+.sig-inner { max-width: 1080px; margin: 0 auto; }
+.sig-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+  margin-top: 3rem;
+}
+.sig-block h4 {
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1rem;
+}
+.sig-name {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;
+  color: #fff; font-weight: 300; margin-bottom: 0.3rem;
+}
+.sig-role { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-bottom: 2rem; }
+.sig-line {
+  border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.sig-meta { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+.accept-btn {
+  display: inline-block; margin-top: 2rem;
+  background: var(--gold); color: var(--ink);
+  padding: 1rem 2.5rem; font-size: 0.75rem; letter-spacing: 0.15em;
+  text-transform: uppercase; font-weight: 500; cursor: pointer;
+  border: none; transition: background 0.25s; text-decoration: none;
+}
+.accept-btn:hover { background: var(--gold2); }
+
+/* ── FOOTER ── */
+footer {
+  background: #0A0805; padding: 2rem;
+  text-align: center; font-size: 0.75rem;
+  color: rgba(255,255,255,0.25); letter-spacing: 0.05em;
+}
+footer span { color: var(--gold2); }
+
+/* ── ACCEPTED STATE ── */
+.accepted-banner {
+  display: none; background: #1a3a2a; border: 1px solid #2d6b48;
+  padding: 1.25rem 2rem; text-align: center; margin-top: 2rem;
+  color: #7fcca1; font-size: 0.85rem; letter-spacing: 0.05em;
+}
+
+/* ── SCROLL ANIMATION ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  header { padding: 1rem 1.25rem; }
+  nav { display: none; }
+  .client-card { grid-template-columns: 1fr; }
+  .client-side { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .sig-grid { grid-template-columns: 1fr; }
+  .hero-names { font-size: 3rem; }
+  .section { padding: 3.5rem 1.25rem; }
+  .payment-strip, .sig-section { padding: 3.5rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-mark"><span>V4</span></div>
+    <div>
+      <a class="logo-text" href="#">V4 CLICKS</a>
+      <span class="logo-sub">Photography</span>
+    </div>
+  </div>
+  <nav>
+    <a href="#events">Events</a>
+    <a href="#deliverables">Deliverables</a>
+    <a href="#payment">Payment</a>
+    <a href="#terms">Terms</a>
+    <a href="#sign">Agreement</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-glow"></div>
+  <div style="position:relative">
+    <div class="hero-eyebrow">Event Coverage Agreement</div>
+    <h1 class="hero-names">Puneeth <span class="amp">&</span> Manojna</h1>
+    <p class="hero-tagline">Cinematography &amp; Photography Package — Bride Side</p>
+    <div class="hero-meta">
+      <div class="meta-chip">
+        <span class="label">Client</span>
+        <span class="val">Mr. Chiranjeeva Chary</span>
+      </div>
+      <div class="meta-chip">
+        <span class="label">Events Begin</span>
+        <span class="val">20 March 2026</span>
+      </div>
+      <div class="meta-chip">
+        <span class="label">Wedding</span>
+        <span class="val">03 April 2026</span>
+      </div>
+      <div class="meta-chip">
+        <span class="label">City</span>
+        <span class="val">Hyderabad</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-divider"></div>
+</div>
+
+<!-- CLIENT DETAILS -->
+<div class="client-card reveal">
+  <div class="client-side">
+    <p class="eyebrow">Client Details</p>
+    <h3>Mr. Chiranjeeva Chary</h3>
+    <div class="info-row"><span class="lbl">Address</span><span class="val">Hyderabad</span></div>
+    <div class="info-row"><span class="lbl">Email</span><span class="val"><a href="mailto:">@gmail.com</a></span></div>
+    <div class="info-row"><span class="lbl">Phone</span><span class="val"><a href="tel:+919632251203">+91 96322 51203</a></span></div>
+    <div class="info-row"><span class="lbl">Alt. Phone</span><span class="val"><a href="tel:+918784731540">+91 87847 31540</a></span></div>
+    <div class="info-row"><span class="lbl">Signed</span><span class="val">17 February 2026 · Hyderabad</span></div>
+  </div>
+  <div class="client-side">
+    <p class="eyebrow">Studio Details</p>
+    <h3>V4 Clicks</h3>
+    <div class="info-row"><span class="lbl">Contact</span><span class="val">Praveen Kumar &amp; Vijay Sriramoju</span></div>
+    <div class="info-row"><span class="lbl">Phone</span><span class="val"><a href="tel:+919908331555" style="color:var(--gold2)">+91 99083 31555</a></span></div>
+    <div class="info-row"><span class="lbl">Alt. Phone</span><span class="val"><a href="tel:+918008086876" style="color:var(--gold2)">+91 80080 86876</a></span></div>
+    <div class="info-row"><span class="lbl">Email</span><span class="val"><a href="mailto:praveen31555@gmail.com" style="color:var(--gold2)">praveen31555@gmail.com</a></span></div>
+    <div class="info-row"><span class="lbl">City</span><span class="val">Hyderabad</span></div>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<section id="events" class="section reveal">
+  <p class="eyebrow">Coverage Schedule</p>
+  <h2 class="section-h">Events &amp; <em>team deployment</em></h2>
+  <div class="rule"></div>
+  <div class="events-wrap">
+    <table class="events-table">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Date &amp; Time</th>
+          <th>Venue</th>
+          <th>Team</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="event-name">Engagement</div>
+          </td>
+          <td class="date-cell">20 March 2026<br><span style="color:var(--muted);font-size:0.78rem">Morning · 10:00 AM</span></td>
+          <td>
+            <div>Papadams Blue Banquet Hall</div>
+            <div class="venue">Kothapet, Hyderabad</div>
+          </td>
+          <td>
+            <span class="team-tag">Traditional Photography</span>
+            <span class="team-tag">Traditional Video</span>
+            <span class="team-tag">Candid Photography</span>
+            <span class="team-tag">Cinematography</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="event-name">Bride Functions</div>
+            <div class="venue">Haldi, Mehendi &amp; more</div>
+          </td>
+          <td class="date-cell">01–02 April 2026</td>
+          <td>
+            <div>Hyderabad</div>
+            <div class="venue">Venue TBD</div>
+          </td>
+          <td>
+            <span class="team-tag">Traditional Photography</span>
+            <span class="team-tag">Traditional Video</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="event-name">Bridegroom Functions</div>
+          </td>
+          <td class="date-cell">01–02 April 2026</td>
+          <td>
+            <div>Hyderabad</div>
+            <div class="venue">Venue TBD</div>
+          </td>
+          <td>
+            <span class="team-tag">Traditional Photography</span>
+            <span class="team-tag">Traditional Video</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="event-name">Wedding</div>
+          </td>
+          <td class="date-cell">03 April 2026<br><span style="color:var(--muted);font-size:0.78rem">Morning</span></td>
+          <td>
+            <div>Bliss Convention</div>
+            <div class="venue">Near Nagole Shilparamam, Hyderabad</div>
+          </td>
+          <td>
+            <span class="team-tag">2 Traditional Photographers</span>
+            <span class="team-tag">2 Traditional Videographers</span>
+            <span class="team-tag">Candid Photography</span>
+            <span class="team-tag">Cinematography</span>
+            <span class="team-tag">Drone</span>
+            <span class="team-tag">Live Streaming</span>
+            <span class="team-tag">LED Screen 8×12</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="event-name">Vratham</div>
+          </td>
+          <td class="date-cell">Hyderabad</td>
+          <td>
+            <div>Hyderabad</div>
+            <div class="venue">Venue TBD</div>
+          </td>
+          <td>
+            <span class="team-tag">Traditional Photography</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section id="deliverables" class="section reveal" style="background:var(--bg2);max-width:100%;padding:5rem 0;">
+  <div class="section-inner">
+    <p class="eyebrow">What You Receive</p>
+    <h2 class="section-h">Standard <em>deliverables</em></h2>
+    <div class="rule"></div>
+    <div class="deliv-grid">
+      <div class="deliv-item">
+        <div class="deliv-num">2–3</div>
+        <h4>Weeks · Preview Files</h4>
+        <p>10–20 low-resolution preview photos shared for social media &amp; family within 2–3 weeks of the event.</p>
+      </div>
+      <div class="deliv-item">
+        <div class="deliv-num">4–6</div>
+        <h4>Weeks · Online Gallery</h4>
+        <p>Password-protected high-resolution gallery, accessible worldwide for 10 years. 250+ print-ready photos on DVD.</p>
+      </div>
+      <div class="deliv-item">
+        <div class="deliv-num">1–2</div>
+        <h4>Min Teaser Film</h4>
+        <p>A short cinematic wedding teaser delivered with the gallery (Cinematography packages only).</p>
+      </div>
+      <div class="deliv-item">
+        <div class="deliv-num">8–10</div>
+        <h4>Weeks · Full Videos</h4>
+        <p>Long-form edited videos of all events, delivered separately in custom-printed DVDs (two copies).</p>
+      </div>
+      <div class="deliv-item">
+        <div class="deliv-num">4–6</div>
+        <h4>Min Cinematic Trailer</h4>
+        <p>A full cinematic trailer of the wedding (Cinematography packages only).</p>
+      </div>
+      <div class="deliv-item">
+        <div class="deliv-num">6–10</div>
+        <h4>Weeks · Signature Album</h4>
+        <p>Customised coffee table book with 125–150 best pictures, printed after client approval of the layout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIMENTARY -->
+<section class="section reveal">
+  <p class="eyebrow">Included at No Extra Cost</p>
+  <h2 class="section-h">Complimentary <em>inclusions</em></h2>
+  <div class="rule"></div>
+  <div class="comp-grid">
+    <div class="comp-item">
+      <div class="comp-dot"></div>
+      <div>
+        <h4>Canvera Albums — 3+3</h4>
+        <p>Premium quality albums of client choice: Engagement 30 spreads (both sides), Bride 30 spreads, Bridegroom 30 spreads, Wedding 40 spreads (both sides). Up to 100 spreads total.</p>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-dot"></div>
+      <div>
+        <h4>Full-Length Edited Videos</h4>
+        <p>All events' full-length edited videos delivered in a Pendrive.</p>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-dot"></div>
+      <div>
+        <h4>Cinematic Teasers</h4>
+        <p>Engagement, Bride Haldi &amp; Wedding cinematic teasers included.</p>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-dot"></div>
+      <div>
+        <h4>Invitation Videos</h4>
+        <p>Engagement &amp; Wedding invitation videos for both bride and groom side.</p>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-dot"></div>
+      <div>
+        <h4>Invitation Cards</h4>
+        <p>Engagement &amp; Wedding invitation cards for both sides.</p>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-dot"></div>
+      <div>
+        <h4>Photo Frames &amp; Calendars</h4>
+        <p>2 photo frames and calendars for both sides.</p>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-dot"></div>
+      <div>
+        <h4>Flex &amp; Car Stickers</h4>
+        <p>4 flex banners and car stickers for both sides.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT PLAN -->
+<div id="payment" class="payment-strip reveal">
+  <div class="payment-inner">
+    <p class="eyebrow" style="color:var(--gold)">Investment &amp; Payment Schedule</p>
+    <h2 class="section-h" style="color:#fff;">Your <em style="color:var(--gold2)">payment plan</em></h2>
+    <div class="rule"></div>
+
+    <div class="payment-grid">
+      <div class="payment-step">
+        <div class="step-num">01</div>
+        <div class="step-tag">Advance · Paid ✓</div>
+        <div class="step-amount">₹25,000</div>
+        <div class="step-when">At time of booking</div>
+        <div class="paid-badge">Received 16 Feb 2026 · UPI</div>
+      </div>
+      <div class="payment-step">
+        <div class="step-num">02</div>
+        <div class="step-tag">Engagement Payment</div>
+        <div class="step-amount">₹1,25,000</div>
+        <div class="step-when">At time of Engagement event<br>20 March 2026</div>
+      </div>
+      <div class="payment-step">
+        <div class="step-num">03</div>
+        <div class="step-tag">Wedding Payment</div>
+        <div class="step-amount">₹2,00,000</div>
+        <div class="step-when">At time of Wedding events<br>03 April 2026</div>
+      </div>
+      <div class="payment-step">
+        <div class="step-num">04</div>
+        <div class="step-tag">Final Payment</div>
+        <div class="step-amount">₹50,000</div>
+        <div class="step-when">After delivering albums<br>&amp; videos</div>
+      </div>
+    </div>
+
+    <div class="total-box">
+      <div class="total-row"><span class="tl">Advance Paid</span><span class="tv">₹25,000 ✓</span></div>
+      <div class="total-row"><span class="tl">At Engagement</span><span class="tv">₹1,25,000</span></div>
+      <div class="total-row"><span class="tl">At Wedding</span><span class="tv">₹2,00,000</span></div>
+      <div class="total-row"><span class="tl">After Delivery</span><span class="tv">₹50,000</span></div>
+      <div class="total-row grand">
+        <span class="tl">Total Package</span>
+        <span class="tv">₹4,00,500</span>
+      </div>
+    </div>
+
+    <!-- BANK DETAILS -->
+    <div class="bank-card">
+      <h4>Payment Details</h4>
+      <div class="bank-row"><span class="lbl">Name</span><span class="val">Sriramoju Vijay Chary</span></div>
+      <div class="bank-row"><span class="lbl">Bank</span><span class="val">IndusInd Bank</span></div>
+      <div class="bank-row"><span class="lbl">Account No.</span><span class="val">158008086876</span></div>
+      <div class="bank-row"><span class="lbl">IFSC</span><span class="val">INDB0000839</span></div>
+      <div class="bank-row"><span class="lbl">Branch</span><span class="val">LB Nagar</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- TERMS -->
+<section id="terms" class="section reveal">
+  <p class="eyebrow">Policies &amp; Agreement</p>
+  <h2 class="section-h">Terms &amp; <em>conditions</em></h2>
+  <div class="rule"></div>
+  <div class="terms-grid">
+    <div class="term-item">
+      <h4>Copyright</h4>
+      <p>All photographs created by V4 Clicks are copyright protected. It is a violation of copyright law to copy, scan, reproduce, or alter images without express written permission. You have the right to home use — printing for personal family albums. Negatives and digital files remain the sole property of V4 Clicks.</p>
+    </div>
+    <div class="term-item">
+      <h4>Exclusivity</h4>
+      <p>V4 Clicks must be the exclusive professional photographer for the event. Additional professional photographers may be employed only with prior written permission. Guest photographers are welcome; however, the photographer will request client intervention if a guest inhibits full documentation.</p>
+    </div>
+    <div class="term-item">
+      <h4>Limits of Liability</h4>
+      <p>V4 Clicks' entire liability is limited to a refund of the amount paid. V4 Clicks cannot guarantee delivery of specifically requested images. In the event of personal illness or circumstance, a substitute will be sent. V4 Clicks is not liable for incomplete coverage caused by tardiness or restrictions placed by client or outside vendors.</p>
+    </div>
+    <div class="term-item">
+      <h4>Permissions</h4>
+      <p>It is the client's responsibility to schedule and obtain permission to use various locations for photography, including the event location and any other locations used during the day.</p>
+    </div>
+    <div class="term-item">
+      <h4>Retainer / Advance</h4>
+      <p>A non-refundable retainer of 33% on the agreed package is due at booking. V4 Clicks will not reserve the date until receipt of the retainer. The retainer may not be transferred to another party without prior written consent.</p>
+    </div>
+    <div class="term-item">
+      <h4>Model Release</h4>
+      <p>V4 Clicks may use select photographs for portfolio, samples, self-promotion, advertisement, or professional competition. Reproductions for any other use require written permission from the client. Any modifications to this agreement must be made in writing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE / ACCEPTANCE -->
+<div id="sign" class="sig-section reveal">
+  <div class="sig-inner">
+    <p class="eyebrow" style="color:var(--gold)">Agreement Acceptance</p>
+    <h2 class="section-h" style="color:#fff;">We confirm <em style="color:var(--gold2)">all terms</em></h2>
+    <div class="rule"></div>
+
+    <div class="sig-grid">
+      <div class="sig-block">
+        <h4>Client</h4>
+        <div class="sig-name">Mr. Chiranjeeva Chary</div>
+        <div class="sig-role">Client — Father of the Bride/Groom</div>
+        <div class="sig-line"></div>
+        <div class="sig-meta">Signature &nbsp;·&nbsp; Date: 17 February 2026 &nbsp;·&nbsp; Place: Hyderabad</div>
+        <button class="accept-btn" onclick="acceptQuote()">✓ Accept &amp; Confirm Agreement</button>
+        <div class="accepted-banner" id="accept-banner">
+          ✓ Agreement accepted — V4 Clicks has been notified. We look forward to capturing your special day!
+        </div>
+      </div>
+      <div class="sig-block">
+        <h4>Photographer / Studio</h4>
+        <div class="sig-name">V4 Clicks</div>
+        <div class="sig-role">Praveen Kumar Sriramoju &amp; Vijay Sriramoju</div>
+        <div class="sig-line"></div>
+        <div class="sig-meta">Signature &nbsp;·&nbsp; Date: 17 February 2026 &nbsp;·&nbsp; Place: Hyderabad</div>
+        <div style="margin-top:2rem;">
+          <div style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-bottom:0.5rem;">Need to talk?</div>
+          <a href="https://wa.me/919908331555" target="_blank" class="accept-btn" style="display:inline-block;background:transparent;border:1px solid var(--gold);color:var(--gold2);">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>Agreement prepared by <span>V4 Clicks Photography</span> · Hyderabad · <span>praveen31555@gmail.com</span> · +91 99083 31555 / +91 80080 86876</p>
+  <p style="margin-top:0.5rem;font-size:0.68rem;">This document is confidential and intended solely for Mr. Chiranjeeva Chary.</p>
+</footer>
+
+<script>
+  // Accept handler
+  function acceptQuote() {
+    document.getElementById('accept-banner').style.display = 'block';
+    document.querySelector('.accept-btn').disabled = true;
+    document.querySelector('.accept-btn').style.opacity = '0.5';
+    document.querySelector('.accept-btn').textContent = '✓ Agreement Accepted';
+  }
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
